@@ -25,6 +25,7 @@
       {
         "unnamedComponents": "arrow-function"
       }
-    ]
+    ],
+    "react/require-default-props": "off"
   }
 }

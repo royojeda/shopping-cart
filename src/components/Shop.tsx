@@ -1,12 +1,20 @@
-import { Link } from "react-router-dom";
+import uniqid from "uniqid";
+import Item from "../types";
+import ItemsList from "./ItemsList";
 
-export default function Shop() {
+interface ShopProps {
+  allItems: { name: string }[];
+}
+
+export default function Shop({ allItems }: ShopProps) {
+  const uniqueItems: Item[] = allItems.map((item) => ({
+    id: uniqid() as string,
+    ...item,
+  }));
+
   return (
-    <div className="flex flex-col gap-4 text-center text-neutral-300">
-      <h1>Shop Page</h1>
-      <Link to="/" className="bg-neutral-700 px-4 py-2">
-        Return home
-      </Link>
+    <div className="flex w-full flex-col gap-8 p-8">
+      <ItemsList items={uniqueItems} />
     </div>
   );
 }
