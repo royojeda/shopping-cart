@@ -1,6 +1,6 @@
 import Item from "../types";
 
-export interface ItemsListProps {
+interface ItemsListProps {
   items: Item[];
 }
 
