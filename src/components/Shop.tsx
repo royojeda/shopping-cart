@@ -1,5 +1,7 @@
+import { useState } from "react";
 import uniqid from "uniqid";
 import Item from "../types";
+import Cart from "./Cart";
 import ItemsList from "./ItemsList";
 
 interface ShopProps {
@@ -12,8 +14,11 @@ export default function Shop({ allItems }: ShopProps) {
     ...item,
   }));
 
+  const [cartItems, setCartItems] = useState<Array<Item>>([]);
+
   return (
     <div className="flex w-full flex-col gap-8 p-8">
+      <Cart items={cartItems} />
       <ItemsList items={uniqueItems} />
     </div>
   );
