@@ -1,13 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { MemoryRouter } from "react-router-dom";
-import App from "./App";
+import App from "../App";
 
-jest.mock("./components/Home", () => () => <h1>Home Page</h1>);
+jest.mock("../components/Home", () => () => <h1>Home Page</h1>);
 
-jest.mock("./components/Shop", () => () => <h1>Shop Page</h1>);
+jest.mock("../components/Shop", () => () => <h1>Shop Page</h1>);
 
-jest.mock("./components/NotFound", () => () => <h1>Not Found Page</h1>);
+jest.mock("../components/NotFound", () => () => <h1>Not Found Page</h1>);
 
 test("renders the home page when visiting root", () => {
   const route = "/";
