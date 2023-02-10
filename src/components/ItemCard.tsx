@@ -60,13 +60,19 @@ export default function ItemCard({ item, onAddToCart }: ItemCardProps) {
             >
               -
             </button>
-            <input
-              type="number"
-              value={quantity}
-              min="1"
-              onChange={handleChange}
-              className="h-full w-8 bg-neutral-800 text-center"
-            />
+            <div>
+              <label htmlFor="quantity" className="sr-only">
+                Quantity
+              </label>
+              <input
+                type="number"
+                value={quantity}
+                id="quantity"
+                min="1"
+                onChange={handleChange}
+                className="h-full w-8 bg-neutral-800 text-center"
+              />
+            </div>
             <button
               type="button"
               onClick={handleIncrement}

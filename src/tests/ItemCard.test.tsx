@@ -24,3 +24,27 @@ test("displays the item details", () => {
   });
   expect(itemDescription).toBeInTheDocument();
 });
+
+test("displays a form for adding the item to the cart", () => {
+  const item = {
+    id: 1,
+    name: "Item 1",
+    description: "Item 1 description.",
+    price: 1,
+  };
+  const handleAddtoCart = () => {};
+
+  render(<ItemCard item={item} onAddToCart={handleAddtoCart} />);
+
+  const quantityInput = screen.queryByLabelText("Quantity");
+  expect(quantityInput).toBeInTheDocument();
+
+  const decrementButton = screen.queryByRole("button", { name: "-" });
+  expect(decrementButton).toBeInTheDocument();
+
+  const incrementButton = screen.queryByRole("button", { name: "+" });
+  expect(incrementButton).toBeInTheDocument();
+
+  const submitButton = screen.queryByRole("button", { name: /add to cart/i });
+  expect(submitButton).toBeInTheDocument();
+});
