@@ -17,9 +17,21 @@ test("renders the correct ItemCards", () => {
   render(<Shop allItems={items} />);
 
   expect(ItemCard).toHaveBeenCalledTimes(3);
-  expect(ItemCard).toHaveBeenNthCalledWith(1, { item: items[0] }, {});
-  expect(ItemCard).toHaveBeenNthCalledWith(2, { item: items[1] }, {});
-  expect(ItemCard).toHaveBeenNthCalledWith(3, { item: items[2] }, {});
+  expect(ItemCard).toHaveBeenNthCalledWith(
+    1,
+    { item: items[0], onAddToCart: expect.anything() },
+    {}
+  );
+  expect(ItemCard).toHaveBeenNthCalledWith(
+    2,
+    { item: items[1], onAddToCart: expect.anything() },
+    {}
+  );
+  expect(ItemCard).toHaveBeenNthCalledWith(
+    3,
+    { item: items[2], onAddToCart: expect.anything() },
+    {}
+  );
 });
 
 test("renders Cart", () => {

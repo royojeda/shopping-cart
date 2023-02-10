@@ -1,14 +1,88 @@
-import Item from "../types";
+import { useState } from "react";
+import { Item } from "../types";
 
 interface ItemCardProps {
   item: Item;
+  onAddToCart: ({
+    itemId,
+    quantity,
+  }: {
+    itemId: number;
+    quantity: number;
+  }) => void;
 }
 
-export default function ItemCard({ item }: ItemCardProps) {
+export default function ItemCard({ item, onAddToCart }: ItemCardProps) {
+  const [quantity, setQuantity] = useState(1);
+
+  const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
+    setQuantity(Number(event.currentTarget.value));
+  };
+
+  const handleIncrement = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+  const handleSubmit: React.FormEventHandler = (event) => {
+    event.preventDefault();
+    onAddToCart({ itemId: item.id, quantity });
+  };
+
   return (
-    <div role="listitem" className="flex w-full flex-col gap-2">
-      <div className="aspect-square w-full rounded-lg border border-neutral-900 bg-neutral-700 shadow-lg shadow-neutral-900" />
-      <div className="text-center">{item.name}</div>
+    <div
+      role="listitem"
+      className="flex w-full flex-col overflow-hidden rounded-lg bg-neutral-700 shadow-lg shadow-neutral-900"
+    >
+      {/* <img src="https://picsum.photos/2000/1500" alt="" className="w-full" /> */}
+      <div className="h-52 w-full bg-black" />
+      <div className="flex flex-col gap-2 p-4">
+        <div className="flex flex-col gap-2">
+          <div className="flex justify-between gap-4 text-lg leading-none">
+            <h1 className="break-words">{item.name}</h1>
+            <h2>${item.price}</h2>
+          </div>
+          <h3 className="break-words text-sm font-light leading-none text-neutral-300">
+            {item.description}
+          </h3>
+        </div>
+        <form onSubmit={handleSubmit} className="flex justify-between gap-2">
+          <div className="flex overflow-hidden rounded-lg border border-neutral-800">
+            <button
+              type="button"
+              onClick={handleDecrement}
+              className="w-8 transition hover:bg-neutral-600 active:bg-neutral-800"
+            >
+              -
+            </button>
+            <input
+              type="number"
+              value={quantity}
+              min="1"
+              onChange={handleChange}
+              className="h-full w-8 bg-neutral-800 text-center"
+            />
+            <button
+              type="button"
+              onClick={handleIncrement}
+              className="w-8 transition hover:bg-neutral-600 active:bg-neutral-800"
+            >
+              +
+            </button>
+          </div>
+          <button
+            type="submit"
+            className="rounded-lg border border-transparent bg-neutral-800 px-3 py-2 transition hover:border-neutral-900 hover:bg-neutral-700 hover:shadow hover:shadow-neutral-900 active:bg-neutral-900"
+          >
+            Add to cart
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
