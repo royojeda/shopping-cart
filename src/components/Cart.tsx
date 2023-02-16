@@ -32,7 +32,10 @@ export default function Cart({ children, totalPrice, itemCount }: CartProps) {
   };
 
   return (
-    <div className="flex w-full justify-end">
+    <div className="flex w-full justify-between">
+      <div className="flex items-center text-2xl font-medium tracking-tight">
+        Shopping Cart
+      </div>
       <button
         type="button"
         onClick={handleOpen}
