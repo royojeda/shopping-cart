@@ -4,9 +4,20 @@ import { CartItem } from "../types";
 interface CartProps {
   items: CartItem[];
   onRemoveFromCart: ({ itemId }: { itemId: number }) => void;
+  onUpdateQuantity: ({
+    itemId,
+    change,
+  }: {
+    itemId: number;
+    change: number;
+  }) => void;
 }
 
-export default function Cart({ items, onRemoveFromCart }: CartProps) {
+export default function Cart({
+  items,
+  onRemoveFromCart,
+  onUpdateQuantity,
+}: CartProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [openClass, setOpenClass] = useState("translate-x-full");
   const [openClass2, setOpenClass2] = useState(
@@ -35,6 +46,18 @@ export default function Cart({ items, onRemoveFromCart }: CartProps) {
     setTimeout(() => {
       onRemoveFromCart({ itemId });
     }, 150);
+  };
+
+  const handleIncrement = (itemId: number) => {
+    onUpdateQuantity({ itemId, change: 1 });
+  };
+
+  const handleDecrement = (item: CartItem) => {
+    if (item.quantity === 1) {
+      onRemoveFromCart({ itemId: item.id });
+    } else {
+      onUpdateQuantity({ itemId: item.id, change: -1 });
+    }
   };
 
   return (
@@ -96,24 +119,26 @@ export default function Cart({ items, onRemoveFromCart }: CartProps) {
                           <div className="flex overflow-hidden rounded-lg border border-neutral-800">
                             <button
                               type="button"
+                              aria-label={`decrement-${item.id}`}
+                              onClick={() => {
+                                handleDecrement(item);
+                              }}
                               className="w-8 transition hover:bg-neutral-600 active:bg-neutral-800"
                             >
                               -
                             </button>
-                            <div>
-                              <label htmlFor="quantity" className="sr-only">
-                                Quantity
-                              </label>
-                              <input
-                                type="number"
-                                id="quantity"
-                                min="1"
-                                defaultValue={item.quantity}
-                                className="h-full w-8 bg-neutral-800 text-center"
-                              />
-                            </div>
+                            <h3
+                              id="quantity"
+                              className="flex h-full w-8 select-none items-center justify-center bg-neutral-800 text-center"
+                            >
+                              {item.quantity}
+                            </h3>
                             <button
                               type="button"
+                              aria-label={`increment-${item.id}`}
+                              onClick={() => {
+                                handleIncrement(item.id);
+                              }}
                               className="w-8 transition hover:bg-neutral-600 active:bg-neutral-800"
                             >
                               +

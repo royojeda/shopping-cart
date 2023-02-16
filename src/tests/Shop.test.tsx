@@ -44,7 +44,11 @@ test("renders Cart", () => {
   render(<Shop allItems={items} />);
 
   expect(Cart).toHaveBeenCalledWith(
-    { items: [], onRemoveFromCart: expect.any(Function) },
+    {
+      items: [],
+      onRemoveFromCart: expect.any(Function),
+      onUpdateQuantity: expect.any(Function),
+    },
     {}
   );
 });
