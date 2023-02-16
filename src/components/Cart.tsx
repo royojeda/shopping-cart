@@ -3,9 +3,10 @@ import { CartItem } from "../types";
 
 interface CartProps {
   items: CartItem[];
+  onRemoveFromCart: ({ itemId }: { itemId: number }) => void;
 }
 
-export default function Cart({ items }: CartProps) {
+export default function Cart({ items, onRemoveFromCart }: CartProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [openClass, setOpenClass] = useState("translate-x-full");
   const [openClass2, setOpenClass2] = useState(
@@ -28,6 +29,12 @@ export default function Cart({ items }: CartProps) {
       setIsOpen(false);
       document.body.classList.remove("overflow-y-hidden");
     }, 700);
+  };
+
+  const handleRemove = (itemId: number) => {
+    setTimeout(() => {
+      onRemoveFromCart({ itemId });
+    }, 150);
   };
 
   return (
@@ -68,12 +75,13 @@ export default function Cart({ items }: CartProps) {
             >
               X
             </button>
-            <div className="flex h-full flex-col justify-center">
+            <div className="flex flex-1 flex-col justify-center">
               {items.length ? (
                 <div className="flex flex-col divide-y divide-neutral-500 rounded-lg bg-neutral-700 px-4 shadow-lg">
                   {items.map((item) => (
                     <div
                       key={item.id}
+                      role="listitem"
                       className="flex flex-col gap-4 py-4 text-neutral-300"
                     >
                       <div className="flex gap-4">
@@ -115,6 +123,10 @@ export default function Cart({ items }: CartProps) {
                         <div className="flex-1">
                           <button
                             type="button"
+                            aria-label={`delete-${item.id}`}
+                            onClick={() => {
+                              handleRemove(item.id);
+                            }}
                             className="rounded-lg border border-transparent bg-neutral-800 px-3 py-2 transition hover:border-neutral-900 hover:bg-neutral-700 hover:shadow hover:shadow-neutral-900 active:bg-neutral-900"
                           >
                             <svg

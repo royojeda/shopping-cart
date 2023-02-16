@@ -34,9 +34,13 @@ export default function Shop({ allItems }: ShopProps) {
     }
   };
 
+  const handleRemoveFromCart = ({ itemId }: { itemId: number }) => {
+    setCartItems(cartItems.filter((item) => item.id !== itemId));
+  };
+
   return (
     <div className="flex w-full flex-col gap-8 p-4">
-      <Cart items={cartItems} />
+      <Cart items={cartItems} onRemoveFromCart={handleRemoveFromCart} />
       <div role="list" className="grid w-full grid-cols-1 gap-8">
         {allItems.map((item) => (
           <ItemCard key={item.id} item={item} onAddToCart={handleAddToCart} />
