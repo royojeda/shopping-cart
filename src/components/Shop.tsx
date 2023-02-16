@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CartItem, Item } from "../types";
 import Cart from "./Cart";
+import CartItemCard from "./CartItemCard";
 import ItemCard from "./ItemCard";
 
 interface ShopProps {
@@ -57,10 +58,25 @@ export default function Shop({ allItems }: ShopProps) {
   return (
     <div className="flex w-full flex-col gap-8 p-4">
       <Cart
-        items={cartItems}
-        onRemoveFromCart={handleRemoveFromCart}
-        onUpdateQuantity={handleUpdateQuantityInCart}
-      />
+        totalPrice={cartItems.reduce(
+          (total, item) => total + item.price * item.quantity,
+          0
+        )}
+        itemCount={cartItems.length}
+      >
+        {cartItems.length ? (
+          <>
+            {cartItems.map((item) => (
+              <CartItemCard
+                key={item.id}
+                item={item}
+                onRemoveFromCart={handleRemoveFromCart}
+                onUpdateQuantity={handleUpdateQuantityInCart}
+              />
+            ))}
+          </>
+        ) : null}
+      </Cart>
       <div role="list" className="grid w-full grid-cols-1 gap-8">
         {allItems.map((item) => (
           <ItemCard key={item.id} item={item} onAddToCart={handleAddToCart} />

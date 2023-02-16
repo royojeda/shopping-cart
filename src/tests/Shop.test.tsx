@@ -45,9 +45,9 @@ test("renders Cart", () => {
 
   expect(Cart).toHaveBeenCalledWith(
     {
-      items: [],
-      onRemoveFromCart: expect.any(Function),
-      onUpdateQuantity: expect.any(Function),
+      children: null,
+      totalPrice: 0,
+      itemCount: 0,
     },
     {}
   );
