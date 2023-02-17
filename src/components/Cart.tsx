@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface CartProps {
   children?: JSX.Element | null;
@@ -12,6 +12,19 @@ export default function Cart({ children, totalPrice, itemCount }: CartProps) {
   const [openClass2, setOpenClass2] = useState(
     "backdrop-blur-none backdrop-brightness-100"
   );
+  const [changeClass, setChangeClass] = useState("");
+
+  useEffect(() => {
+    if (!isOpen) {
+      setChangeClass("duration-300 bg-neutral-500");
+      setTimeout(() => {
+        setChangeClass("duration-300");
+        setTimeout(() => {
+          setChangeClass("");
+        }, 300);
+      }, 300);
+    }
+  }, [totalPrice]);
 
   const handleOpen = () => {
     setIsOpen(true);
@@ -34,7 +47,7 @@ export default function Cart({ children, totalPrice, itemCount }: CartProps) {
       <button
         type="button"
         onClick={handleOpen}
-        className="flex w-20 justify-center gap-2 rounded-lg bg-neutral-700 px-3 py-2 shadow-md transition hover:bg-neutral-600 active:bg-neutral-900"
+        className={`flex w-20 justify-center gap-2 rounded-lg bg-neutral-700 px-3 py-2 shadow-md transition hover:bg-neutral-600 active:bg-neutral-900 ${changeClass}`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
