@@ -19,17 +19,11 @@ export default function Cart({ children, totalPrice, itemCount }: CartProps) {
       setOpenClass("translate-x-0");
       setOpenClass2("backdrop-blur backdrop-brightness-50");
     }, 1);
-    setTimeout(() => {
-      document.body.classList.add("overflow-y-hidden");
-    }, 500);
   };
 
   const handleClose = () => {
     setOpenClass("translate-x-full");
     setOpenClass2("backdrop-blur-none backdrop-brightness-100");
-    setTimeout(() => {
-      document.body.classList.remove("overflow-y-hidden");
-    }, 100);
     setTimeout(() => {
       setIsOpen(false);
     }, 700);
