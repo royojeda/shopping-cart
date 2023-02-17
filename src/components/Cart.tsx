@@ -82,7 +82,7 @@ export default function Cart({ children, totalPrice, itemCount }: CartProps) {
             </button>
             <div className="flex flex-1 flex-col justify-center">
               {itemCount ? (
-                <div className="flex flex-col divide-y divide-neutral-500 rounded-lg bg-neutral-700 px-4 shadow-lg">
+                <div className="flex flex-col divide-y divide-neutral-500 rounded-lg bg-neutral-700 px-4 shadow-md">
                   {children}
                   <h1 className="flex w-full py-4 text-center text-xl font-medium drop-shadow-md">
                     <div className="flex-1">Total: </div>
@@ -93,6 +93,12 @@ export default function Cart({ children, totalPrice, itemCount }: CartProps) {
                 <h1 className="text-center">Your cart is currently empty.</h1>
               )}
             </div>
+            <button
+              type="button"
+              className="w-full max-w-xs self-center rounded-lg border border-neutral-900 bg-neutral-700 py-3 text-xl font-semibold shadow-md transition hover:bg-neutral-600 active:bg-neutral-900"
+            >
+              Check out
+            </button>
           </div>
         </div>
       )}
