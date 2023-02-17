@@ -42,8 +42,8 @@ export default function CartItemCard({
       className="grid grid-cols-2 gap-4 py-4 text-neutral-300"
     >
       <div className="aspect-square w-full rounded-lg bg-black shadow shadow-neutral-900" />
-      <div className="flex w-full flex-col gap-4">
-        <h2 className="">{item.name}</h2>
+      <div className="flex w-full flex-col justify-center gap-4">
+        <h2>{item.name}</h2>
         <h2 className="text-lg font-medium">${item.price}</h2>
       </div>
       <div className="col-span-2 flex justify-end gap-4">
