@@ -70,6 +70,13 @@ export default function Cart({ children, totalPrice, itemCount }: CartProps) {
         <div
           className={`fixed inset-0 flex min-h-screen justify-end transition duration-700 ${openClass2}`}
         >
+          <button
+            type="button"
+            onClick={handleClose}
+            className="w-full cursor-default"
+          >
+            {" "}
+          </button>
           <div
             className={`flex h-full w-full max-w-lg flex-col gap-6 overflow-y-scroll bg-neutral-800 p-8 outline outline-neutral-900 transition duration-700 ${openClass}`}
           >
