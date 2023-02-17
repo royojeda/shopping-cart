@@ -9,9 +9,27 @@ jest.mock("../components/Cart");
 
 test("renders the correct ItemCards", () => {
   const items = [
-    { id: 1, name: "Item 1", description: "This is an item.", price: 1 },
-    { id: 2, name: "Item 2", description: "This is an item.", price: 2 },
-    { id: 3, name: "Item 3", description: "This is an item.", price: 3 },
+    {
+      id: 1,
+      name: "Item 1",
+      description: "This is an item.",
+      price: 1,
+      imageName: "black",
+    },
+    {
+      id: 2,
+      name: "Item 2",
+      description: "This is an item.",
+      price: 2,
+      imageName: "black",
+    },
+    {
+      id: 3,
+      name: "Item 3",
+      description: "This is an item.",
+      price: 3,
+      imageName: "black",
+    },
   ];
 
   render(<Shop allItems={items} />);
@@ -36,9 +54,27 @@ test("renders the correct ItemCards", () => {
 
 test("renders Cart", () => {
   const items = [
-    { id: 1, name: "Item 1", description: "This is an item.", price: 1 },
-    { id: 2, name: "Item 2", description: "This is an item.", price: 2 },
-    { id: 3, name: "Item 3", description: "This is an item.", price: 3 },
+    {
+      id: 1,
+      name: "Item 1",
+      description: "This is an item.",
+      price: 1,
+      imageName: "black",
+    },
+    {
+      id: 2,
+      name: "Item 2",
+      description: "This is an item.",
+      price: 2,
+      imageName: "black",
+    },
+    {
+      id: 3,
+      name: "Item 3",
+      description: "This is an item.",
+      price: 3,
+      imageName: "black",
+    },
   ];
 
   render(<Shop allItems={items} />);

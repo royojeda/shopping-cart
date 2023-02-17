@@ -34,13 +34,24 @@ export default function ItemCard({ item, onAddToCart }: ItemCardProps) {
     onAddToCart({ itemId: item.id, quantity });
   };
 
+  const imageFor = (shopItem: Item) => {
+    let image = "";
+    try {
+      // eslint-disable-next-line global-require, import/no-dynamic-require
+      image = require(`../images/${shopItem.imageName}.png`);
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.log(error);
+    }
+    return image;
+  };
+
   return (
     <div
       role="listitem"
       className="flex w-full max-w-[16rem] flex-col overflow-hidden rounded-lg bg-neutral-700 shadow-lg shadow-neutral-900"
     >
-      {/* <img src="https://picsum.photos/2000/1500" alt="" className="w-full" /> */}
-      <div className="h-52 w-full bg-black" />
+      <img src={imageFor(item)} alt={item.name} className="h-52 w-full" />
       <div className="flex flex-col gap-2 p-4">
         <div className="flex flex-col gap-2">
           <div className="flex justify-between gap-4 text-lg leading-none">

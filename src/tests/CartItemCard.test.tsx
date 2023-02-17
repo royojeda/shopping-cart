@@ -2,12 +2,15 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import CartItemCard from "../components/CartItemCard";
 
+jest.mock("../images/black.png");
+
 test("displays the correct item details", () => {
   const item = {
     id: 1,
     name: "Item 11",
     description: "Item 1 description.",
     price: 7,
+    imageName: "black",
     quantity: 93,
   };
   const onRemoveFromCart = () => {};
@@ -21,7 +24,7 @@ test("displays the correct item details", () => {
     />
   );
 
-  const itemName = screen.queryByRole("heading", { name: /Item 11/ });
+  const itemName = screen.queryByRole("heading", { name: /^Item 11$/ });
   expect(itemName).toBeInTheDocument();
 
   const itemQuantity = screen.queryByRole("heading", { name: /93/ });
@@ -29,6 +32,9 @@ test("displays the correct item details", () => {
 
   const itemPrice = screen.queryByRole("heading", { name: /\$7/ });
   expect(itemPrice).toBeInTheDocument();
+
+  const itemImage = screen.queryByAltText("Item 11");
+  expect(itemImage).toHaveAttribute("src", "black.png");
 });
 
 test("calls the delete callback with the item id", () => {
@@ -38,6 +44,7 @@ test("calls the delete callback with the item id", () => {
     name: "Item 1",
     description: "Item 1 description.",
     price: 7,
+    imageName: "black",
     quantity: 93,
   };
   const onRemoveFromCart = jest.fn();
@@ -62,6 +69,7 @@ test("calls the update quantity callback with +1 after clicking the increment bu
     name: "Item 1",
     description: "Item 1 description.",
     price: 7,
+    imageName: "black",
     quantity: 93,
   };
   const onRemoveFromCart = () => {};
@@ -85,6 +93,7 @@ test("calls the update quantity callback with -1 after clicking the decrement bu
     name: "Item 1",
     description: "Item 1 description.",
     price: 7,
+    imageName: "black",
     quantity: 93,
   };
   const onRemoveFromCart = () => {};
@@ -108,6 +117,7 @@ test("calls the delete callback after clicking the decrement button if the quant
     name: "Item 1",
     description: "Item 1 description.",
     price: 7,
+    imageName: "black",
     quantity: 1,
   };
   const onRemoveFromCart = jest.fn();

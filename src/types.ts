@@ -3,6 +3,7 @@ export interface Item {
   name: string;
   description: string;
   price: number;
+  imageName: string;
 }
 
 export interface CartItem extends Item {

@@ -7,6 +7,7 @@ test("displays the item details", () => {
     name: "Item 1",
     description: "Item 1 description.",
     price: 1,
+    imageName: "black",
   };
   const handleAddtoCart = () => {};
 
@@ -23,6 +24,9 @@ test("displays the item details", () => {
     name: "Item 1 description.",
   });
   expect(itemDescription).toBeInTheDocument();
+
+  const itemImage = screen.queryByAltText("Item 1");
+  expect(itemImage).toHaveAttribute("src", "black.png");
 });
 
 test("displays a form for adding the item to the cart", () => {
@@ -31,6 +35,7 @@ test("displays a form for adding the item to the cart", () => {
     name: "Item 1",
     description: "Item 1 description.",
     price: 1,
+    imageName: "black",
   };
   const handleAddtoCart = () => {};
 
