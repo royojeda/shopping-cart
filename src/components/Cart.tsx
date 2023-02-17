@@ -105,7 +105,9 @@ export default function Cart({ children, totalPrice, itemCount }: CartProps) {
                   </button>
                 </div>
               ) : (
-                <h1 className="text-center">Your cart is currently empty.</h1>
+                <h1 className="w-full text-center">
+                  Your cart is currently empty.
+                </h1>
               )}
             </div>
           </div>
