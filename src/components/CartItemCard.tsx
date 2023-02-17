@@ -53,13 +53,12 @@ export default function CartItemCard({
       role="listitem"
       className="grid grid-cols-2 gap-4 py-4 text-neutral-300"
     >
-      {/* <div className="aspect-square w-full rounded-lg bg-black shadow shadow-neutral-900" /> */}
       <img
         src={imageFor(item)}
         alt={item.name}
         className="aspect-square w-full rounded-lg shadow shadow-neutral-900"
       />
-      <div className="flex w-full flex-col justify-center gap-4">
+      <div className="flex w-full flex-col justify-around gap-4">
         <h2>{item.name}</h2>
         <h2 className="text-lg font-medium">${item.price}</h2>
       </div>
