@@ -37,7 +37,7 @@ export default function ItemCard({ item, onAddToCart }: ItemCardProps) {
   return (
     <div
       role="listitem"
-      className="flex w-full flex-col overflow-hidden rounded-lg bg-neutral-700 shadow-lg shadow-neutral-900"
+      className="flex w-full max-w-[16rem] flex-col overflow-hidden rounded-lg bg-neutral-700 shadow-lg shadow-neutral-900"
     >
       {/* <img src="https://picsum.photos/2000/1500" alt="" className="w-full" /> */}
       <div className="h-52 w-full bg-black" />
