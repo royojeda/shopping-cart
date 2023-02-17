@@ -12,15 +12,15 @@ export default function Cart({ children, totalPrice, itemCount }: CartProps) {
   const [openClass2, setOpenClass2] = useState(
     "backdrop-blur-none backdrop-brightness-100"
   );
-  const [changeClass, setChangeClass] = useState("");
+  const [changeClass, setChangeClass] = useState("bg-neutral-700");
 
   useEffect(() => {
     if (!isOpen) {
       setChangeClass("duration-300 bg-neutral-500");
       setTimeout(() => {
-        setChangeClass("duration-300");
+        setChangeClass("duration-300 bg-neutral-700");
         setTimeout(() => {
-          setChangeClass("");
+          setChangeClass("bg-neutral-700");
         }, 300);
       }, 300);
     }
@@ -47,7 +47,7 @@ export default function Cart({ children, totalPrice, itemCount }: CartProps) {
       <button
         type="button"
         onClick={handleOpen}
-        className={`flex w-20 justify-center gap-2 rounded-lg bg-neutral-700 px-3 py-2 shadow-md transition hover:bg-neutral-600 active:bg-neutral-900 ${changeClass}`}
+        className={`flex w-20 justify-center gap-2 rounded-lg px-3 py-2 shadow-md transition hover:bg-neutral-600 active:bg-neutral-900 ${changeClass}`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
