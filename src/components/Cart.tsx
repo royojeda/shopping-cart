@@ -21,7 +21,7 @@ export default function Cart({ children, totalPrice, itemCount }: CartProps) {
     }, 1);
     setTimeout(() => {
       document.body.classList.add("overflow-y-hidden");
-    }, 600);
+    }, 500);
   };
 
   const handleClose = () => {
