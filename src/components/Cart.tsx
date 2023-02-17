@@ -78,7 +78,7 @@ export default function Cart({ children, totalPrice, itemCount }: CartProps) {
             {" "}
           </button>
           <div
-            className={`flex h-full w-full max-w-lg flex-col gap-6 overflow-y-scroll bg-neutral-800 p-8 outline outline-neutral-900 transition duration-700 ${openClass}`}
+            className={`flex h-full w-full min-w-max max-w-lg flex-col gap-6 overflow-y-scroll bg-neutral-800 p-8 outline outline-neutral-900 transition duration-700 ${openClass}`}
           >
             <button
               type="button"
