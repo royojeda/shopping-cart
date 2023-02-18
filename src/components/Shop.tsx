@@ -93,7 +93,7 @@ export default function Shop({ allItems }: ShopProps) {
         </div>
       </div>
       <div className="fixed inset-x-0 bottom-0 border-t border-neutral-900 bg-neutral-800 py-2 px-4 text-center">
-        All images shown belong to{" "}
+        All product images belong to{" "}
         <a href="https://www.sweetwater.com/" className="underline">
           Sweetwater.com
         </a>
