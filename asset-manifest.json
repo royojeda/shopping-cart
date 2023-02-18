@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.96c871db.css",
+    "main.js": "/shopping-cart/static/js/main.7006c0b2.js",
+    "static/media/Gibson Custom Les Paul Axcess Custom Figured Top - Bengal Burst.png": "/shopping-cart/static/media/Gibson Custom Les Paul Axcess Custom Figured Top - Bengal Burst.18306e9f6e3c07e49de0.png",
+    "static/media/home_background.jpg": "/shopping-cart/static/media/home_background.d16f03d052ae9669d705.jpg",
+    "static/media/Fender Custom Shop Limited-edition Red Hot Strat Super Heavy Relic - Faded Aged Chocolate 3-Color Sunburst.png": "/shopping-cart/static/media/Fender Custom Shop Limited-edition Red Hot Strat Super Heavy Relic - Faded Aged Chocolate 3-Color Sunburst.95ed8206963ee95b6813.png",
+    "static/media/PRS Custom 24 Piezo Electric Guitar with Pattern Thin Neck - Black Gold Wrap Burst 10-Top.png": "/shopping-cart/static/media/PRS Custom 24 Piezo Electric Guitar with Pattern Thin Neck - Black Gold Wrap Burst 10-Top.9f8078bc1083c4547e50.png",
+    "static/media/PRS S2 10th Anniversary Custom 24 Limited-edition Electric Guitar - Lake Blue.png": "/shopping-cart/static/media/PRS S2 10th Anniversary Custom 24 Limited-edition Electric Guitar - Lake Blue.7d328ccbcb2e39b26f3c.png",
+    "static/media/PRS SE Hollowbody II Piezo Electric Guitar - Black Gold Burst.png": "/shopping-cart/static/media/PRS SE Hollowbody II Piezo Electric Guitar - Black Gold Burst.2997b5343b9449b3eb44.png",
+    "static/media/Gibson ES-335 Semi-hollowbody Electric Guitar - Sixties Cherry.png": "/shopping-cart/static/media/Gibson ES-335 Semi-hollowbody Electric Guitar - Sixties Cherry.cb801eb2b822d861a806.png",
+    "static/media/Gibson SG Standard '61 - Vintage Cherry.png": "/shopping-cart/static/media/Gibson SG Standard '61 - Vintage Cherry.c8a62628d86ac4694f55.png",
+    "static/media/PRS DW CE 24 Hardtail Limited Edition - Waring Burst.png": "/shopping-cart/static/media/PRS DW CE 24 Hardtail Limited Edition - Waring Burst.876aa21b1044bab4a701.png",
+    "static/media/Gibson Explorer - Antique Natural.png": "/shopping-cart/static/media/Gibson Explorer - Antique Natural.9040ad4659e7fe8a2e94.png",
+    "static/media/Fender American Professional II Telecaster - Dark Night with Rosewood Fingerboard.png": "/shopping-cart/static/media/Fender American Professional II Telecaster - Dark Night with Rosewood Fingerboard.ec194b6939e869e938a5.png",
+    "static/media/Ibanez Gio GRG121DX - Walnut Flat.png": "/shopping-cart/static/media/Ibanez Gio GRG121DX - Walnut Flat.72b9eab268531d309b5e.png",
+    "static/media/Epiphone Les Paul Custom Electric Guitar - Ebony.png": "/shopping-cart/static/media/Epiphone Les Paul Custom Electric Guitar - Ebony.f99f17f5cc41c251b1d5.png",
+    "static/media/Epiphone Les Paul Custom Electric Guitar - Alpine White.png": "/shopping-cart/static/media/Epiphone Les Paul Custom Electric Guitar - Alpine White.c9a727c85c480e253f00.png",
+    "static/media/Jackson Dinky Arch Top JS22 DKA - Satin Black.png": "/shopping-cart/static/media/Jackson Dinky Arch Top JS22 DKA - Satin Black.25bc1c58e2568b63084f.png",
+    "static/media/Fender American Ultra Telecaster - Texas Tea with Rosewood Fingerboard.png": "/shopping-cart/static/media/Fender American Ultra Telecaster - Texas Tea with Rosewood Fingerboard.987eb13d921406e2b906.png",
+    "static/media/ESP LTD EC-1000 Baritone Electric Guitar - Charcoal Metallic Satin.png": "/shopping-cart/static/media/ESP LTD EC-1000 Baritone Electric Guitar - Charcoal Metallic Satin.c504a0e2d37b45d3881f.png",
+    "index.html": "/shopping-cart/index.html",
+    "main.96c871db.css.map": "/shopping-cart/static/css/main.96c871db.css.map",
+    "main.7006c0b2.js.map": "/shopping-cart/static/js/main.7006c0b2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96c871db.css",
+    "static/js/main.7006c0b2.js"
+  ]
+}
