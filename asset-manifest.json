@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.31756fde.css",
+    "main.css": "/shopping-cart/static/css/main.679e5c2b.css",
     "main.js": "/shopping-cart/static/js/main.3702d406.js",
     "static/media/Gibson Custom Les Paul Axcess Custom Figured Top - Bengal Burst.png": "/shopping-cart/static/media/Gibson Custom Les Paul Axcess Custom Figured Top - Bengal Burst.18306e9f6e3c07e49de0.png",
     "static/media/home_background.jpg": "/shopping-cart/static/media/home_background.d16f03d052ae9669d705.jpg",
@@ -20,11 +20,11 @@
     "static/media/Fender American Ultra Telecaster - Texas Tea with Rosewood Fingerboard.png": "/shopping-cart/static/media/Fender American Ultra Telecaster - Texas Tea with Rosewood Fingerboard.987eb13d921406e2b906.png",
     "static/media/ESP LTD EC-1000 Baritone Electric Guitar - Charcoal Metallic Satin.png": "/shopping-cart/static/media/ESP LTD EC-1000 Baritone Electric Guitar - Charcoal Metallic Satin.c504a0e2d37b45d3881f.png",
     "index.html": "/shopping-cart/index.html",
-    "main.31756fde.css.map": "/shopping-cart/static/css/main.31756fde.css.map",
+    "main.679e5c2b.css.map": "/shopping-cart/static/css/main.679e5c2b.css.map",
     "main.3702d406.js.map": "/shopping-cart/static/js/main.3702d406.js.map"
   },
   "entrypoints": [
-    "static/css/main.31756fde.css",
+    "static/css/main.679e5c2b.css",
     "static/js/main.3702d406.js"
   ]
 }
