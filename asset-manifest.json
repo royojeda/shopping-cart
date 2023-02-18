@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.96c871db.css",
-    "main.js": "/shopping-cart/static/js/main.10a1e131.js",
+    "main.css": "/shopping-cart/static/css/main.ee9663e1.css",
+    "main.js": "/shopping-cart/static/js/main.318ad6f8.js",
     "static/media/Gibson Custom Les Paul Axcess Custom Figured Top - Bengal Burst.png": "/shopping-cart/static/media/Gibson Custom Les Paul Axcess Custom Figured Top - Bengal Burst.18306e9f6e3c07e49de0.png",
     "static/media/home_background.jpg": "/shopping-cart/static/media/home_background.d16f03d052ae9669d705.jpg",
     "static/media/Fender Custom Shop Limited-edition Red Hot Strat Super Heavy Relic - Faded Aged Chocolate 3-Color Sunburst.png": "/shopping-cart/static/media/Fender Custom Shop Limited-edition Red Hot Strat Super Heavy Relic - Faded Aged Chocolate 3-Color Sunburst.95ed8206963ee95b6813.png",
@@ -20,11 +20,11 @@
     "static/media/Fender American Ultra Telecaster - Texas Tea with Rosewood Fingerboard.png": "/shopping-cart/static/media/Fender American Ultra Telecaster - Texas Tea with Rosewood Fingerboard.987eb13d921406e2b906.png",
     "static/media/ESP LTD EC-1000 Baritone Electric Guitar - Charcoal Metallic Satin.png": "/shopping-cart/static/media/ESP LTD EC-1000 Baritone Electric Guitar - Charcoal Metallic Satin.c504a0e2d37b45d3881f.png",
     "index.html": "/shopping-cart/index.html",
-    "main.96c871db.css.map": "/shopping-cart/static/css/main.96c871db.css.map",
-    "main.10a1e131.js.map": "/shopping-cart/static/js/main.10a1e131.js.map"
+    "main.ee9663e1.css.map": "/shopping-cart/static/css/main.ee9663e1.css.map",
+    "main.318ad6f8.js.map": "/shopping-cart/static/js/main.318ad6f8.js.map"
   },
   "entrypoints": [
-    "static/css/main.96c871db.css",
-    "static/js/main.10a1e131.js"
+    "static/css/main.ee9663e1.css",
+    "static/js/main.318ad6f8.js"
   ]
 }
