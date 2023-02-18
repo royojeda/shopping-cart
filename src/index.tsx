@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/shopping-cart">
       <App />
     </BrowserRouter>
   </React.StrictMode>
