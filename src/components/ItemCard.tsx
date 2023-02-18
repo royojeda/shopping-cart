@@ -51,16 +51,21 @@ export default function ItemCard({ item, onAddToCart }: ItemCardProps) {
       role="listitem"
       className="flex w-full max-w-[16rem] flex-col overflow-hidden rounded-lg bg-neutral-700 shadow-lg shadow-neutral-900"
     >
-      <img src={imageFor(item)} alt={item.name} className="h-52 w-full" />
-      <div className="flex flex-col gap-2 p-4">
+      <div className="flex w-full justify-center bg-white">
+        <img src={imageFor(item)} alt={item.name} className="h-52" />
+      </div>
+      <div className="flex h-full flex-col justify-between gap-4 p-4">
         <div className="flex flex-col gap-2">
           <div className="flex justify-between gap-4 text-lg leading-none">
             <h1 className="break-words">{item.name}</h1>
-            <h2>${item.price}</h2>
+            <h2>
+              $
+              {item.price.toLocaleString("en-US", { minimumFractionDigits: 2 })}
+            </h2>
           </div>
-          <h3 className="break-words text-sm font-light leading-none text-neutral-300">
+          {/* <h3 className="break-words text-sm font-light leading-none text-neutral-300">
             {item.description}
-          </h3>
+          </h3> */}
         </div>
         <form onSubmit={handleSubmit} className="flex justify-between gap-2">
           <div className="flex overflow-hidden rounded-lg border border-neutral-800">

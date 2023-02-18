@@ -16,14 +16,8 @@ test("displays the item details", () => {
   const itemName = screen.queryByRole("heading", { level: 1, name: "Item 1" });
   expect(itemName).toBeInTheDocument();
 
-  const itemPrice = screen.queryByRole("heading", { level: 2, name: "$1" });
+  const itemPrice = screen.queryByRole("heading", { level: 2, name: "$1.00" });
   expect(itemPrice).toBeInTheDocument();
-
-  const itemDescription = screen.queryByRole("heading", {
-    level: 3,
-    name: "Item 1 description.",
-  });
-  expect(itemDescription).toBeInTheDocument();
 
   const itemImage = screen.queryByAltText("Item 1");
   expect(itemImage).toHaveAttribute("src", "black.png");

@@ -51,18 +51,20 @@ export default function CartItemCard({
     <div
       key={item.id}
       role="listitem"
-      className="grid grid-cols-2 gap-4 py-4 text-neutral-300"
+      className="flex flex-col justify-between gap-4 py-4 text-neutral-300"
     >
-      <img
-        src={imageFor(item)}
-        alt={item.name}
-        className="aspect-square w-full rounded-lg shadow shadow-neutral-900"
-      />
-      <div className="flex w-full flex-col justify-around gap-4">
-        <h2>{item.name}</h2>
-        <h2 className="text-lg font-medium">${item.price}</h2>
+      <div className="flex aspect-square flex-col gap-4 min-[425px]:flex-row">
+        <div className="flex h-fit items-center justify-center overflow-hidden rounded-lg bg-white shadow shadow-neutral-900">
+          <img src={imageFor(item)} alt={item.name} className="w-full" />
+        </div>
+        <div className="justify-between1 flex w-full flex-col gap-4">
+          <h2 className="font-light md:text-xl">{item.name}</h2>
+          <h2 className="text-lg font-semibold md:text-xl">
+            ${item.price.toLocaleString("en-US", { minimumFractionDigits: 2 })}
+          </h2>
+        </div>
       </div>
-      <div className="col-span-2 flex justify-end gap-4">
+      <div className="col-span-2 flex h-min justify-end gap-4">
         <div className="flex w-fit justify-self-end overflow-hidden rounded-lg border border-neutral-800">
           <button
             type="button"

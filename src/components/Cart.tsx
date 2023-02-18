@@ -90,12 +90,17 @@ export default function Cart({ children, totalPrice, itemCount }: CartProps) {
             <div className="flex flex-1 items-center">
               {itemCount ? (
                 <div className="flex w-full flex-col gap-4">
-                  <div className="flex flex-col divide-y divide-neutral-500 rounded-lg bg-neutral-700 px-4 shadow-md">
+                  <div className="grid auto-rows-fr grid-cols-1 divide-y divide-neutral-500 rounded-lg bg-neutral-700 px-4 shadow-md">
                     {children}
                   </div>
-                  <h1 className="flex w-full rounded-lg bg-neutral-700 py-4 text-center text-xl font-medium drop-shadow-md">
+                  <h1 className="flex w-full flex-col rounded-lg bg-neutral-700 py-4 text-center text-xl font-medium drop-shadow-md min-[425px]:flex-row">
                     <div className="flex-1">Total: </div>
-                    <div className="flex-1">${totalPrice}</div>
+                    <div className="flex-1">
+                      $
+                      {totalPrice.toLocaleString("en-US", {
+                        minimumFractionDigits: 2,
+                      })}
+                    </div>
                   </h1>
                   <button
                     type="button"

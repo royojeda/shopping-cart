@@ -1,124 +1,84 @@
 {
   "items": [
     {
-      "name": "Item 1",
-      "description": "Item 1 description.",
-      "price": 1,
-      "imageName": "black1"
+      "name": "PRS DW CE 24 Hardtail Limited Edition - Waring Burst",
+      "price": 2699,
+      "imageName": "PRS DW CE 24 Hardtail Limited Edition - Waring Burst"
     },
     {
-      "name": "Item 2",
-      "description": "Item 2 description.",
-      "price": 2,
-      "imageName": "white"
+      "name": "PRS Custom 24 Piezo Electric Guitar with Pattern Thin Neck - Black Gold Wrap Burst 10-Top",
+      "price": 5470,
+      "imageName": "PRS Custom 24 Piezo Electric Guitar with Pattern Thin Neck - Black Gold Wrap Burst 10-Top"
     },
     {
-      "name": "Item 3",
-      "description": "Item 3 description.",
-      "price": 3,
-      "imageName": "black"
+      "name": "Gibson Custom Les Paul Axcess Custom Figured Top - Bengal Burst",
+      "price": 5499,
+      "imageName": "Gibson Custom Les Paul Axcess Custom Figured Top - Bengal Burst"
     },
     {
-      "name": "Item 4",
-      "description": "Item 4 description.",
-      "price": 4,
-      "imageName": "black"
+      "name": "Fender Custom Shop Limited-edition Red Hot Strat Super Heavy Relic - Faded Aged Chocolate 3-Color Sunburst",
+      "price": 6200,
+      "imageName": "Fender Custom Shop Limited-edition Red Hot Strat Super Heavy Relic - Faded Aged Chocolate 3-Color Sunburst"
     },
     {
-      "name": "Item 5",
-      "description": "Item 5 description.",
-      "price": 5,
-      "imageName": "black"
+      "name": "Gibson SG Standard '61 - Vintage Cherry",
+      "price": 1999,
+      "imageName": "Gibson SG Standard '61 - Vintage Cherry"
     },
     {
-      "name": "Item 6",
-      "description": "Item 6 description.",
-      "price": 1,
-      "imageName": "black"
+      "name": "PRS S2 10th Anniversary Custom 24 Limited-edition Electric Guitar - Lake Blue",
+      "price": 2299,
+      "imageName": "PRS S2 10th Anniversary Custom 24 Limited-edition Electric Guitar - Lake Blue"
     },
     {
-      "name": "Item 7",
-      "description": "Item 7 description.",
-      "price": 2,
-      "imageName": "black"
+      "name": "Gibson Explorer - Antique Natural",
+      "price": 1999,
+      "imageName": "Gibson Explorer - Antique Natural"
     },
     {
-      "name": "Item 8",
-      "description": "Item 8 description.",
-      "price": 3,
-      "imageName": "black"
+      "name": "Epiphone Les Paul Custom Electric Guitar - Alpine White",
+      "price": 729,
+      "imageName": "Epiphone Les Paul Custom Electric Guitar - Alpine White"
     },
     {
-      "name": "Item 9",
-      "description": "Item 9 description.",
-      "price": 4,
-      "imageName": "black"
+      "name": "PRS SE Hollowbody II Piezo Electric Guitar - Black Gold Burst",
+      "price": 1599,
+      "imageName": "PRS SE Hollowbody II Piezo Electric Guitar - Black Gold Burst"
     },
     {
-      "name": "Item 10",
-      "description": "Item 10 description.",
-      "price": 5,
-      "imageName": "black"
+      "name": "Jackson Dinky Arch Top JS22 DKA - Satin Black",
+      "price": 199.99,
+      "imageName": "Jackson Dinky Arch Top JS22 DKA - Satin Black"
     },
     {
-      "name": "Item 11",
-      "description": "Item 11 description.",
-      "price": 1,
-      "imageName": "black"
+      "name": "Gibson ES-335 Semi-hollowbody Electric Guitar - Sixties Cherry",
+      "price": 3499,
+      "imageName": "Gibson ES-335 Semi-hollowbody Electric Guitar - Sixties Cherry"
     },
     {
-      "name": "Item 12",
-      "description": "Item 12 description.",
-      "price": 2,
-      "imageName": "black"
+      "name": "Fender American Ultra Telecaster - Texas Tea with Rosewood Fingerboard",
+      "price": 2149.99,
+      "imageName": "Fender American Ultra Telecaster - Texas Tea with Rosewood Fingerboard"
     },
     {
-      "name": "Item 13",
-      "description": "Item 13 description.",
-      "price": 3,
-      "imageName": "black"
+      "name": "Epiphone Les Paul Custom Electric Guitar - Ebony",
+      "price": 729,
+      "imageName": "Epiphone Les Paul Custom Electric Guitar - Ebony"
     },
     {
-      "name": "Item 14",
-      "description": "Item 14 description.",
-      "price": 4,
-      "imageName": "black"
+      "name": "Fender American Professional II Telecaster - Dark Night with Rosewood Fingerboard",
+      "price": 1699.99,
+      "imageName": "Fender American Professional II Telecaster - Dark Night with Rosewood Fingerboard"
     },
     {
-      "name": "Item 15",
-      "description": "Item 15 description.",
-      "price": 5,
-      "imageName": "black"
+      "name": "ESP LTD EC-1000 Baritone Electric Guitar - Charcoal Metallic Satin",
+      "price": 1199,
+      "imageName": "ESP LTD EC-1000 Baritone Electric Guitar - Charcoal Metallic Satin"
     },
     {
-      "name": "Item 16",
-      "description": "Item 16 description.",
-      "price": 1,
-      "imageName": "black"
-    },
-    {
-      "name": "Item 17",
-      "description": "Item 17 description.",
-      "price": 2,
-      "imageName": "black"
-    },
-    {
-      "name": "Item 18",
-      "description": "Item 18 description.",
-      "price": 3,
-      "imageName": "black"
-    },
-    {
-      "name": "Item 19",
-      "description": "Item 19 description.",
-      "price": 4,
-      "imageName": "black"
-    },
-    {
-      "name": "Item 20",
-      "description": "Item 20 description.",
-      "price": 5,
-      "imageName": "black"
+      "name": "Ibanez Gio GRG121DX - Walnut Flat",
+      "price": 229.99,
+      "imageName": "Ibanez Gio GRG121DX - Walnut Flat"
     }
   ]
 }

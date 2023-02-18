@@ -85,7 +85,7 @@ export default function Shop({ allItems }: ShopProps) {
       <div className="w-full p-8">
         <div
           role="list"
-          className="grid w-full grid-cols-fit-64 justify-center justify-items-center gap-8"
+          className="grid w-full auto-rows-fr grid-cols-fit-64 justify-center justify-items-center gap-8"
         >
           {allItems.map((item) => (
             <ItemCard key={item.id} item={item} onAddToCart={handleAddToCart} />
