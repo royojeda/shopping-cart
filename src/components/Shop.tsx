@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { CartItem, Item } from "../types";
 import Cart from "./Cart";
@@ -58,9 +59,12 @@ export default function Shop({ allItems }: ShopProps) {
   return (
     <div className="w-full pt-[104px]">
       <div className="fixed inset-x-0 top-0 flex justify-between bg-neutral-800 p-8 shadow-md shadow-neutral-900">
-        <div className="flex items-center text-2xl font-medium tracking-tight">
+        <Link
+          to="/"
+          className="flex items-center text-2xl font-medium tracking-tight"
+        >
           Shopping Cart
-        </div>
+        </Link>
         <Cart
           totalPrice={cartItems.reduce(
             (total, item) => total + item.price * item.quantity,
