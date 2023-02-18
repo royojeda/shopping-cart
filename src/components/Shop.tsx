@@ -82,7 +82,7 @@ export default function Shop({ allItems }: ShopProps) {
           ) : null}
         </Cart>
       </div>
-      <div className="w-full p-8">
+      <div className="w-full p-8 pb-[97px] min-[361px]:pb-[73px]">
         <div
           role="list"
           className="grid w-full auto-rows-fr grid-cols-fit-64 justify-center justify-items-center gap-8"
